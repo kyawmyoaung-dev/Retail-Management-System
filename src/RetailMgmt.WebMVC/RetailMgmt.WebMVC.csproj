@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-RetailMgmt.WebMVC-D0EF052D-4E0C-4CE1-89BA-9E534743F1C7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RetailMgmt.Application\RetailMgmt.Application.csproj" />
+    <ProjectReference Include="..\RetailMgmt.Core\RetailMgmt.Core.csproj" />
+    <ProjectReference Include="..\RetailMgmt.Infrastructure\RetailMgmt.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

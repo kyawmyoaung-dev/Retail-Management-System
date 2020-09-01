@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\AdministrationModule\" />
+    <Folder Include="Entities\SaleModule\" />
+    <Folder Include="Interfaces\AdministrationModule\" />
+    <Folder Include="Interfaces\InventoryModule\" />
+    <Folder Include="Interfaces\Utlities\" />
+    <Folder Include="Interfaces\SaleModule\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\AdministrationModule\" />
+    <Folder Include="Dtos\InventoryModule\" />
+    <Folder Include="Dtos\SaleModule\" />
+    <Folder Include="Dtos\OrganizationModule\" />
+    <Folder Include="Interfaces\AdministrationModule\" />
+    <Folder Include="Interfaces\InventoryModule\" />
+    <Folder Include="Interfaces\Base\" />
+    <Folder Include="Interfaces\SaleModule\" />
+    <Folder Include="Services\AdministrationModule\" />
+    <Folder Include="Services\Base\" />
+    <Folder Include="Services\InventoryModule\" />
+    <Folder Include="Services\SaleModule\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RetailMgmt.Core\RetailMgmt.Core.csproj" />
+  </ItemGroup>
+
+</Project>
