@@ -4,6 +4,7 @@ using RetailMgmt.Core.Interfaces.OrganizationModule;
 using RetailMgmt.Infrastructure.Data;
 using RetailMgmt.Infrastructure.Repository.Base;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace RetailMgmt.Infrastructure.Repository.OrganizationModule
 {
@@ -14,6 +15,7 @@ namespace RetailMgmt.Infrastructure.Repository.OrganizationModule
 
         public async Task<Currency> GetCurrencyByCodeName(string codeName)
         {
+            //_dbContext.DisposeAsync
             return await _dbContext.Currencies.FirstOrDefaultAsync(x => x.Code == codeName);
         }
     }

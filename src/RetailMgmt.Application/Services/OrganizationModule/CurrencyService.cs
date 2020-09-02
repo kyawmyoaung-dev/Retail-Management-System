@@ -4,7 +4,6 @@ using RetailMgmt.Core.Interfaces.OrganizationModule;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace RetailMgmt.Application.Services.OrganizationModule
 {
@@ -25,6 +24,11 @@ namespace RetailMgmt.Application.Services.OrganizationModule
         public async Task<Currency> GetCurrencyByCodeName(string codeName)
         {
             return await _currencyRepository.GetCurrencyByCodeName(codeName);
+        }
+
+        public async Task<Currency> GetHomeCurrency()
+        {
+            return await _currencyRepository.FirstOrDefaultAsync(x => x.IsHomeCurrency == true);
         }
     }
 }

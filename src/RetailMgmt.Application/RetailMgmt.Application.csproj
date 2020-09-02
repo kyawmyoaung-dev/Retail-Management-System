@@ -8,11 +8,11 @@
     <Folder Include="Dtos\AdministrationModule\" />
     <Folder Include="Dtos\InventoryModule\" />
     <Folder Include="Dtos\SaleModule\" />
-    <Folder Include="Dtos\OrganizationModule\" />
     <Folder Include="Interfaces\AdministrationModule\" />
     <Folder Include="Interfaces\InventoryModule\" />
     <Folder Include="Interfaces\Base\" />
     <Folder Include="Interfaces\SaleModule\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Services\AdministrationModule\" />
     <Folder Include="Services\Base\" />
     <Folder Include="Services\InventoryModule\" />

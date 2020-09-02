@@ -6,5 +6,6 @@ namespace RetailMgmt.Core.Entities.OrganizationModule
     {
         public string Code { get; set; }
         public string Description { get; set; }
+        public bool IsHomeCurrency { get;set;}
     }
 }

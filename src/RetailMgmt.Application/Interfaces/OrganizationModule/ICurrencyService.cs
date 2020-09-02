@@ -9,5 +9,7 @@ namespace RetailMgmt.Application.Interfaces.OrganizationModule
         Task<Currency> GetCurrencyByCodeName(string codeName);
 
         Task<IEnumerable<Currency>> GetAllCurrencyAsync();
+
+        Task<Currency> GetHomeCurrency();
     }
 }

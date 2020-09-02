@@ -7,23 +7,24 @@ namespace RetailMgmt.Infrastructure.Data.SeedData.OrganizationModule
 {
     public class CurrencySeedData
     {
-        public static async Task  SeedAsync(RetailDbContext dbContext)
+        public static async Task SeedAsync(RetailDbContext dbContext)
         {
             dbContext.Database.EnsureCreated();
 
-            if(!dbContext.Currencies.Any())
+            if (!dbContext.Currencies.Any())
             {
                 dbContext.Currencies.AddRange(GerPreconfiguredCurrency());
+                
                 await dbContext.SaveChangesAsync();
             }
         }
 
         private static List<Currency> GerPreconfiguredCurrency()
-        { 
+        {
             return new List<Currency>()
             {
-                new Currency(){ Code = "US", Description = "United States" },
-                new Currency(){ Code = "MM", Description = "Myanmar" }
+                new Currency(){ Code = "US", Description = "United States", IsHomeCurrency = false },
+                new Currency(){ Code = "MM", Description = "Myanmar", IsHomeCurrency = true }
 
             };
         }

@@ -14,24 +14,79 @@ namespace RetailMgmt.Infrastructure.Repository.Base
     {
         protected readonly RetailDbContext _dbContext;
 
+        #region ctor
         public EfRepositoryBase(RetailDbContext dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(RetailDbContext));
         }
+        #endregion
+
+        #region Insert
+        public void Add(T entity)
+        {
+            _dbContext.Set<T>().Add(entity);
+        }
+
         public async Task<T> AddAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
 
-            await _dbContext.SaveChangesAsync();
-
             return entity;
         }
 
-        public async Task DeleteAsync(T entity)
+        public void AddRange(IEnumerable<T> entities)
+        {
+            _dbContext.AddRange(entities);
+        }
+
+        public async Task AddRangeAsync(IEnumerable<T> entities)
+        {
+            await _dbContext.Set<T>().AddRangeAsync(entities);
+        }
+        #endregion
+
+        #region Aggregate
+        public int Count(Expression<Func<T, bool>> predicate)
+        {
+            return _dbContext.Set<T>().Count(predicate);
+        }
+
+        public async Task<int> CountAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().CountAsync(predicate);
+        }
+        public bool Any(Expression<Func<T, bool>> predicate)
+        {
+            return _dbContext.Set<T>().Any(predicate);
+        }
+
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().AnyAsync(predicate);
+        }
+        #endregion
+
+        #region Delete
+        public void Remove(T entity)
         {
             _dbContext.Set<T>().Remove(entity);
+        }
 
-            await _dbContext.SaveChangesAsync();
+        public void RemoveRange(IEnumerable<T> entities)
+        {
+            _dbContext.Set<T>().RemoveRange(entities);
+        }
+        #endregion
+
+        #region Select
+        public T FirstOrDefault(Expression<Func<T, bool>> predicate)
+        {
+            return _dbContext.Set<T>().FirstOrDefault(predicate);
+        }
+
+        public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().FirstOrDefaultAsync(predicate);
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
@@ -92,11 +147,52 @@ namespace RetailMgmt.Infrastructure.Repository.Base
         {
             return _dbContext.Set<T>().Where(predicate);
         }
+        public async Task<T> SingleAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().SingleAsync(predicate);
+        }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<T> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().SingleOrDefaultAsync(predicate);
+        }
+        #endregion
+
+        #region Update
+
+        public void Update(T entity)
         {
             _dbContext.Set<T>().Update(entity);
+        }
+
+        public void UpdateRange(IEnumerable<T> entities)
+        {
+           _dbContext.Set<T>().UpdateRange(entities);
+        }
+        #endregion
+
+        #region SaveChange
+        public void SaveChanges()
+        {
+           _dbContext.SaveChanges();
+        }
+
+        public async Task SaveChangesAsync()
+        {
             await _dbContext.SaveChangesAsync();
         }
+        #endregion
+
+        #region Dispose
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+        }
+
+        public async Task DisposeAsync()
+        {
+            await _dbContext.DisposeAsync();
+        }
+        #endregion
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using RetailMgmt.Application.Interfaces.OrganizationModule;
 using RetailMgmt.WebMVC.Models;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace RetailMgmt.WebMVC.Controllers
 {
@@ -16,9 +17,9 @@ namespace RetailMgmt.WebMVC.Controllers
             _currencyService = currencyService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var test = _currencyService.GetAllCurrencyAsync();
+            var test = await _currencyService.GetAllCurrencyAsync();
             return View();
         }
 
