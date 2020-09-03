@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RetailMgmt.Application.Interfaces.OrganizationModule;
+using RetailMgmt.Core.Services.OrganizationModule;
 using RetailMgmt.WebMVC.Models;
 using System.Diagnostics;
 using System.Threading.Tasks;

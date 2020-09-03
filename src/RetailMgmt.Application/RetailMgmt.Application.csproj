@@ -7,16 +7,20 @@
   <ItemGroup>
     <Folder Include="Dtos\AdministrationModule\" />
     <Folder Include="Dtos\InventoryModule\" />
+    <Folder Include="Dtos\OrganizationModule\" />
     <Folder Include="Dtos\SaleModule\" />
-    <Folder Include="Interfaces\AdministrationModule\" />
-    <Folder Include="Interfaces\InventoryModule\" />
-    <Folder Include="Interfaces\Base\" />
-    <Folder Include="Interfaces\SaleModule\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Services\AdministrationModule\" />
     <Folder Include="Services\Base\" />
     <Folder Include="Services\InventoryModule\" />
     <Folder Include="Services\SaleModule\" />
+    <Folder Include="ViewModels\AdministrationModule\" />
+    <Folder Include="ViewModels\InventoryModule\" />
+    <Folder Include="ViewModels\OrganizationModule\" />
+    <Folder Include="ViewModels\SaleModule\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.7" />
   </ItemGroup>
 
   <ItemGroup>

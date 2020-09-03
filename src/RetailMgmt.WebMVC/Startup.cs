@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using RetailMgmt.WebMVC.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RetailMgmt.WebMVC.Extension;
+using RetailMgmt.Application;
+using RetailMgmt.Infrastructure;
+using RetailMgmt.WebMVC.Data;
 
 namespace RetailMgmt.WebMVC
 {
@@ -40,7 +35,7 @@ namespace RetailMgmt.WebMVC
             
             services.AddRetailDbContext(Configuration);
 
-            services.AddInfrastructureRepository();
+            services.AddInfrastructure();
 
             services.AddApplicationServices();
         }

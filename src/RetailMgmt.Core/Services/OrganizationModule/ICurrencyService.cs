@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace RetailMgmt.Application.Interfaces.OrganizationModule
+namespace RetailMgmt.Core.Services.OrganizationModule
 {
     public interface ICurrencyService
     {

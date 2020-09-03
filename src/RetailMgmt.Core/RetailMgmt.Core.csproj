@@ -11,6 +11,10 @@
     <Folder Include="Interfaces\InventoryModule\" />
     <Folder Include="Interfaces\Utlities\" />
     <Folder Include="Interfaces\SaleModule\" />
+    <Folder Include="Services\AdministrationModule\" />
+    <Folder Include="Services\InventoryModule\" />
+    <Folder Include="Services\Base\" />
+    <Folder Include="Services\SaleModule\" />
   </ItemGroup>
 
 </Project>

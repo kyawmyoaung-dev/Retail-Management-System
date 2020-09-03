@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using RetailMgmt.Application.Interfaces.OrganizationModule;
 using RetailMgmt.Application.Services.OrganizationModule;
+using RetailMgmt.Core.Services.OrganizationModule;
 
-namespace RetailMgmt.WebMVC.Extension
+namespace RetailMgmt.Application
 {
-    public static class ApplicationServicesExtensions
+    public static class DependencyInjection
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
