@@ -7,10 +7,10 @@
   <ItemGroup>
     <Folder Include="Entities\AdministrationModule\" />
     <Folder Include="Entities\SaleModule\" />
-    <Folder Include="Interfaces\AdministrationModule\" />
-    <Folder Include="Interfaces\InventoryModule\" />
-    <Folder Include="Interfaces\Utlities\" />
-    <Folder Include="Interfaces\SaleModule\" />
+    <Folder Include="Repositories\AdministrationModule\" />
+    <Folder Include="Repositories\InventoryModule\" />
+    <Folder Include="Repositories\Utlities\" />
+    <Folder Include="Repositories\SaleModule\" />
     <Folder Include="Services\AdministrationModule\" />
     <Folder Include="Services\InventoryModule\" />
     <Folder Include="Services\Base\" />

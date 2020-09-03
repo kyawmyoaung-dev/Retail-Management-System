@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RetailMgmt.Core.Interfaces.Base;
-using RetailMgmt.Core.Interfaces.OrganizationModule;
+using RetailMgmt.Core.Repositories.OrganizationModule;
 using RetailMgmt.Infrastructure.Data;
+using RetailMgmt.Infrastructure.Repositories.OrganizationModule;
 using RetailMgmt.Infrastructure.Repository.Base;
-using RetailMgmt.Infrastructure.Repository.OrganizationModule;
 
 namespace RetailMgmt.Infrastructure
 {

@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RetailMgmt.Core.Entities.OrganizationModule;
-using RetailMgmt.Core.Interfaces.OrganizationModule;
+using RetailMgmt.Core.Repositories.OrganizationModule;
 using RetailMgmt.Infrastructure.Data;
 using RetailMgmt.Infrastructure.Repository.Base;
 using System.Threading.Tasks;
-using System.Linq;
 
-namespace RetailMgmt.Infrastructure.Repository.OrganizationModule
+namespace RetailMgmt.Infrastructure.Repositories.OrganizationModule
 {
     public class CurrencyRepository : EfRepositoryBase<Currency>, ICurrencyRepository
     {

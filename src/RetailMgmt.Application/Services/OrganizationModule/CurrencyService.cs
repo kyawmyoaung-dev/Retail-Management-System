@@ -1,6 +1,6 @@
 ﻿
 using RetailMgmt.Core.Entities.OrganizationModule;
-using RetailMgmt.Core.Interfaces.OrganizationModule;
+using RetailMgmt.Core.Repositories.OrganizationModule;
 using RetailMgmt.Core.Services.OrganizationModule;
 using System;
 using System.Collections.Generic;

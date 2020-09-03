@@ -13,9 +13,9 @@
     <Folder Include="Data\SeedData\InventoryModule\" />
     <Folder Include="Data\SeedData\SaleModule\" />
     <Folder Include="EntityConfiguration\" />
-    <Folder Include="Repository\AdministrationModule\" />
-    <Folder Include="Repository\InventoryModule\" />
-    <Folder Include="Repository\SaleModule\" />
+    <Folder Include="Repositories\AdministrationModule\" />
+    <Folder Include="Repositories\InventoryModule\" />
+    <Folder Include="Repositories\SaleModule\" />
   </ItemGroup>
 
   <ItemGroup>

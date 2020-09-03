@@ -2,7 +2,7 @@
 using RetailMgmt.Core.Interfaces.Base;
 using System.Threading.Tasks;
 
-namespace RetailMgmt.Core.Interfaces.OrganizationModule
+namespace RetailMgmt.Core.Repositories.OrganizationModule
 {
     public interface ICurrencyRepository : IRepositoryBase<Currency>
     {
