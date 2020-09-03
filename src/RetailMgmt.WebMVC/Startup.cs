@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using RetailMgmt.Application;
 using RetailMgmt.Infrastructure;
 using RetailMgmt.WebMVC.Data;
+
 
 namespace RetailMgmt.WebMVC
 {
@@ -26,13 +28,14 @@ namespace RetailMgmt.WebMVC
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("RetailIdentityDBCS")));
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+
+            services.AddControllersWithViews().AddFluentValidation();
+
             services.AddRazorPages();
 
-
-            
             services.AddRetailDbContext(Configuration);
 
             services.AddInfrastructure();

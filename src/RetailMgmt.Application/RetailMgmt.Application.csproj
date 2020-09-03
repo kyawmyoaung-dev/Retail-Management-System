@@ -9,17 +9,22 @@
     <Folder Include="Dtos\InventoryModule\" />
     <Folder Include="Dtos\OrganizationModule\" />
     <Folder Include="Dtos\SaleModule\" />
+    <Folder Include="ModelValidation\AdministrationModule\" />
+    <Folder Include="ModelValidation\InventoryModule\" />
+    <Folder Include="ModelValidation\OrganizationModule\" />
+    <Folder Include="ModelValidation\SaleModule\" />
     <Folder Include="Services\AdministrationModule\" />
     <Folder Include="Services\Base\" />
     <Folder Include="Services\InventoryModule\" />
     <Folder Include="Services\SaleModule\" />
     <Folder Include="ViewModels\AdministrationModule\" />
     <Folder Include="ViewModels\InventoryModule\" />
-    <Folder Include="ViewModels\OrganizationModule\" />
     <Folder Include="ViewModels\SaleModule\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.2.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.7" />
   </ItemGroup>
 

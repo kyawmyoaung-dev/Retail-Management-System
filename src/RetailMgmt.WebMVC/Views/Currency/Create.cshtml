@@ -1,0 +1,17 @@
+﻿@using RetailMgmt.Application.ViewModels.OrganizationModule.Currency;
+@model CurrencyCreateViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post" asp-controller="Currency" asp-action="Create">
+    <label>Code</label>
+    <input asp-for="Code" class="form-control form-input" type="text" />
+    <br />
+    <label>Description</label>
+    <input asp-for="Description" class="form-control form-input" type="text" />
+    <br />
+    <input type="submit" value="Save" />
+</form>
