@@ -42,6 +42,13 @@ namespace RetailMgmt.Core.Interfaces.Base
         #endregion
 
         #region Select
+        Task<IReadOnlyList<T>> GetPagedListAsync(Expression<Func<T, bool>> predicate = null,
+                                Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+                                string includeString = null,
+                                bool disableTracking = true,
+                                int pageNumber = 0,
+                                int pageSize = 10);
+
         IQueryable<T> GetQueryables(Expression<Func<T, bool>> predicate);
         Task<IReadOnlyList<T>> GetAllAsync();
 

@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Dtos\AdministrationModule\" />
+    <Folder Include="Dtos\Base\" />
     <Folder Include="Dtos\InventoryModule\" />
-    <Folder Include="Dtos\OrganizationModule\" />
     <Folder Include="Dtos\SaleModule\" />
     <Folder Include="ModelValidation\AdministrationModule\" />
     <Folder Include="ModelValidation\InventoryModule\" />

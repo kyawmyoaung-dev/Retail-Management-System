@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RetailMgmt.Core.Services.OrganizationModule;
+using RetailMgmt.Application.Dtos.OrganizationModule.Currency;
+using RetailMgmt.Application.Interfaces.OrganizationModule.Currency;
 using RetailMgmt.WebMVC.Models;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace RetailMgmt.WebMVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var test = await _currencyService.GetAllCurrencyAsync();
+            //var test = await _currencyService.GetPagedListAsync(new CurrencyListInputDto{ PageNumber = 0, PageSize = 1 });
             return View();
         }
 

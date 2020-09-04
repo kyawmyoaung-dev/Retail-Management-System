@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using RetailMgmt.Application.Interfaces.OrganizationModule.Currency;
 using RetailMgmt.Application.Services.OrganizationModule;
-using RetailMgmt.Core.Services.OrganizationModule;
 using System.Reflection;
 
 namespace RetailMgmt.Application

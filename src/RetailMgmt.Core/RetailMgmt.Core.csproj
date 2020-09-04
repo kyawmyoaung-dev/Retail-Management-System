@@ -11,10 +11,6 @@
     <Folder Include="Repositories\InventoryModule\" />
     <Folder Include="Repositories\Utlities\" />
     <Folder Include="Repositories\SaleModule\" />
-    <Folder Include="Services\AdministrationModule\" />
-    <Folder Include="Services\InventoryModule\" />
-    <Folder Include="Services\Base\" />
-    <Folder Include="Services\SaleModule\" />
   </ItemGroup>
 
 </Project>

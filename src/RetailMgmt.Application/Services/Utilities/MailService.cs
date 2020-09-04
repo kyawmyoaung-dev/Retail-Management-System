@@ -1,7 +1,4 @@
-﻿using RetailMgmt.Core.Services.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RetailMgmt.Application.Interfaces.Utilities;
 
 namespace RetailMgmt.Application.Services.Utilities
 {
